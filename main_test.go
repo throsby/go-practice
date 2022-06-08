@@ -10,8 +10,7 @@ import (
 	_ "net/http"
 	_ "net/http/httptest"
 	_ "strconv"
-
-	_ "github.com/throsby/go-practice"
+	// _ "github.com/throsby/go-practice"
 )
 
 var a main.App
