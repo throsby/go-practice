@@ -1,4 +1,4 @@
-module github.com/throsby/go-project
+module github.com/throsby/go-practice
 
 go 1.18
 

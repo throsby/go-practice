@@ -1,4 +1,4 @@
-package main_test
+package main
 
 import (
 	"log"
@@ -10,17 +10,18 @@ import (
 	_ "net/http"
 	_ "net/http/httptest"
 	_ "strconv"
+	// _ "github.com/lib/pq"
 	// _ "github.com/throsby/go-practice"
 )
 
-var a main.App
+var a App
 
 func TestMain(m *testing.M) {
-	a.Initialize(
-		os.Getenv("APP_DB_USERNAME"),
-		os.Getenv("APP_DB_PASSWORD"),
-		os.Getenv("APP_DB_NAME"))
-
+	// a.Initialize(
+	// 	os.Getenv("APP_DB_USERNAME"),
+	// 	os.Getenv("APP_DB_PASSWORD"),
+	// 	os.Getenv("APP_DB_NAME"))
+	a.Initialize("throsbywells", "", "throsbywells")
 	ensureTableExists()
 	code := m.Run()
 	clearTable()
